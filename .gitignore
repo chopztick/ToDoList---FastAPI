@@ -1,2 +1,2 @@
-/app/__pycache__/.
-/app/task.db
+./app/__pycache__/.
+./app/task.db
