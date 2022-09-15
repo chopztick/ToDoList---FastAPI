@@ -50,7 +50,7 @@ With this application you can create your own ToDo List:
 <br/>
 
 **Execute the POST request from the docs page or via:**
-<br/> **DELETE** `http://127.0.0.1:8000/todolist/`
+<br/> **POST** `http://127.0.0.1:8000/todolist/`
 <br/>
 
 **Please use the following body in your request:**
