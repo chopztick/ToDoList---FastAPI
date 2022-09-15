@@ -46,10 +46,11 @@ With this application you can create your own ToDo List:
 <br/>
 <br/>
 
-## Add task to your list via POST request:
+## Add task to your list via POST request
 <br/>
 
-**Execute the POST request from the docs page or via:** `http://127.0.0.1:8000/todolist/`
+**Execute the POST request from the docs page or via:**
+<br/> **DELETE** `http://127.0.0.1:8000/todolist/`
 <br/>
 
 **Please use the following body in your request:**
@@ -73,10 +74,11 @@ With this application you can create your own ToDo List:
 <br/>
 <br/>
 
-## Get all your tasks from the list via GET request:
+## Get all your tasks from the list via GET request
 <br/>
 
-**Execute the GET request from the docs page or via:** `http://127.0.0.1:8000/todolist`
+**Execute the GET request from the docs page or via:**
+<br/> **GET** `http://127.0.0.1:8000/todolist`
 
 <br/>
 Returns your tasks in a list:
@@ -95,7 +97,8 @@ Returns your tasks in a list:
 ## Get a task from the list by ID via GET request:
 <br/>
 
-**Enter ID and execute the GET request from the docs page or via:** `http://127.0.0.1:8000/todolist/{id}`
+**Enter ID and execute the GET request from the docs page or via:**
+<br/> **GET** `http://127.0.0.1:8000/todolist/{id}`
 
 <br/>
 Returns your requested task:
@@ -109,10 +112,11 @@ Returns your requested task:
 ```
 <br/>
 
-## Update a task in your list by ID via PATCH request:
+## Update a task in your list by ID via PATCH request
 <br/>
 
-**Enter ID and execute the PATCH request from the docs page or via:** `http://127.0.0.1:8000/todolist/{id}`
+**Enter ID and execute the PATCH request from the docs page or via:*
+<br/> **PATCH** `http://127.0.0.1:8000/todolist/{id}`
 <br/>
 
 **Please use the following body in your request:**
@@ -135,10 +139,11 @@ Returns your requested task:
 
 <br/>
 
-## Delete a task from the list by ID via DELETE request:
+## Delete a task from the list by ID via DELETE request
 <br/>
 
-**Enter ID and execute the DELETE request from the docs page or via:** `http://127.0.0.1:8000/todolist/{id}`
+**Enter ID and execute the DELETE request from the docs page or via:**
+<br/> **DELETE** `http://127.0.0.1:8000/todolist/{id}`
 <br/>
 
 *On success returns:*
@@ -150,10 +155,11 @@ Returns your requested task:
 
 <br/>
 
-## Delete all tasks from the with *done* status via DELETE request:
+## Delete all tasks from the with *"done"* status via DELETE request
 <br/>
 
-**Execute the DELETE request from the docs page or via:** `http://127.0.0.1:8000/todolist/done/`
+**Execute the DELETE request from the docs page or via:**
+<br/> **DELETE** `http://127.0.0.1:8000/todolist/done/`
 <br/>
 
 *On success returns:*
@@ -164,13 +170,14 @@ Returns your requested task:
 ```
 <br/>
 
-## Get all your tasks from the list with the selected status via GET request:
+## Get all your tasks from the list with the selected status via GET request
 <br/>
 
-**Select the status and execute the GET request from the docs page or via:** `http://127.0.0.1:8000/todolist/{status}`
+**Select the status and execute the GET request from the docs page or via:** 
+<br/> **GET** `http://127.0.0.1:8000/todolist/{status}`
 
 <br/>
-Returns your tasks in a list with the selected status:
+Returns your tasks in a list with the selected status
 
 ```JSON
 [
