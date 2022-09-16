@@ -16,12 +16,7 @@ class BaseTasks(SQLModel):
     status: Status = Field(default="not_started/in_progress/done")
     due_date: date = Field(default=date.today())
 
-    # Validation to check if input date is not past date
-    @validator('due_date')
-    def check_date(cls, v):
-        if v < date.today():
-            raise ValueError("past values not allowed")
-        return v
+
 
 # To create the database, id added
 class TasksTable(BaseTasks, table=True):
@@ -34,10 +29,17 @@ class ReadTask(TasksTable):
 
 # Same as TaskTable, just to avoid misunderstanding in app.py
 class AddTask(BaseTasks):
-    pass
+
+     # Validation to check if input date is not past date
+    @validator('due_date')
+    def check_date(cls, v):
+        if v < date.today():
+            raise ValueError("past values not allowed")
+        return v
+
 
 # Inherited from BaseTask, changed all attribute to optional to be capable for partial update
-class UpdateTask(BaseTasks):
+class UpdateTask(AddTask):
     task: Optional[str] = Field(index=True, default="add_task")
     status: Optional[Status] = Field(default="not_started/in_progress/done")
     due_date: Optional[date] = Field(default=date.today())
