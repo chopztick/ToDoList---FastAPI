@@ -115,7 +115,7 @@ Returns your requested task:
 ## Update a task in your list by ID via PATCH request
 <br/>
 
-**Enter ID and execute the PATCH request from the docs page or via:*
+**Enter ID and execute the PATCH request from the docs page or via:**
 <br/> **PATCH** `http://127.0.0.1:8000/todolist/{id}`
 <br/>
 
